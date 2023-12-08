@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Message for My Girlfriend</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #message {
+            display: none;
+            color: #ff69b4;
+            font-size: 18px;
+            margin-top: 20px;
+            opacity: 0; /* Initially transparent */
+            transition: opacity 1s ease-in-out; /* Smooth fade-in effect */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Special Message for My Baby Girl!</h1>
+
+    <p>Click the button to reveal a special message:</p>
+
+    <button onclick="displayMessage()">Show Message</button>
+
+    <p id="message"></p>
+
+    <script>
+        function displayMessage() {
+            var messageElement = document.getElementById("message");
+            var buttonElement = document.querySelector("button");
+
+            // Replace the following message with your own
+            var yourMessage = "I love you more than words can express. You make every day special. Reply na :(";
+
+            messageElement.innerHTML = yourMessage;
+            messageElement.style.display = "block";
+
+            // Triggering reflow to enable the transition
+            void messageElement.offsetWidth;
+
+            messageElement.style.opacity = 1;
+            buttonElement.style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
